@@ -1,7 +1,7 @@
 console.log("Start");
 
-setTimeout(function cb() {
+document.getElementById("btn").addEventListener("click", function cb() {
   console.log("Callback");
-}, 5000);
+});
 
 console.log("End");
