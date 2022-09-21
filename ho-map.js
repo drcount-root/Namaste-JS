@@ -15,3 +15,4 @@ Array.prototype.calculate = function (logic) {
 };
 
 console.log(radius.calculate(area));
+ 
