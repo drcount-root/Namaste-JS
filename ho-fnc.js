@@ -119,12 +119,21 @@ console.log(out);
 
 const arrX = [2, -5, 99, 12, 46];
 
-const findMax = arrX => {
-  let max = arrX[0];
-  for(let i = 1; i < arrX.length; i++){
-    if(arrX[i] > max) max = arrX[i];    
+const findMax = (arrX) => {
+  let max = 0;
+  for (let i = 0; i < arrX.length; i++) {
+    if (arrX[i] > max) max = arrX[i];
   }
   return max;
-}
+};
 
 console.log(findMax(arrX));
+
+// Using reduce()
+
+const op = arrX.reduce((max, curr) => {
+  if (curr > max) max = curr;
+  return max;
+}, 0);
+
+console.log(op);
