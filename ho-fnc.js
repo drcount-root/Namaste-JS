@@ -137,3 +137,50 @@ const op = arrX.reduce((max, curr) => {
 }, 0);
 
 console.log(op);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+const users = [
+  { firstName: "akshay", lastName: "saini", age: 26 },
+  { firstName: "dona ld", lastName: "trump", age: 75 },
+  { firstName: "elon", lastName: "musk", age: 50 },
+  { firstName: "Mr", lastName: "Obama", age: 26 },
+  { firstName: "elon", lastName: "musk", age: 50 },
+  { firstName: "elon", lastName: "musk", age: 50 },
+];
+
+// Create an array of all firstNames
+const resFirstName = users.map((x) => x.firstName + " " + x.lastName);
+
+console.log(resFirstName);
+
+// Find out how many users have a particular age ?
+// { '26': 2, '50': 3, '75': 1 }
+const res = users.reduce((acc, curr) => {
+  if (acc[curr.age]) {
+    acc[curr.age]++;
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+
+console.log(res);
