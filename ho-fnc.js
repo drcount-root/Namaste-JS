@@ -184,3 +184,18 @@ const res = users.reduce((acc, curr) => {
 }, {});
 
 console.log(res);
+
+// Find the firstName of all the users whose age is less than 30
+
+const youngUsers = users.filter((x) => x.age < 30).map((x) => x.firstName);
+console.log(youngUsers);
+
+// Same thing using reduce
+const red = users.reduce((acc, curr) => {
+  if (curr.age < 30) {
+    acc.push(curr.firstName);
+  }
+  return acc;
+}, []);
+
+console.log(red);
